@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>React Sally resume</title>
+</head>
+
+<body>
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin>
+    </script>
+    <script type="text/babel">
+        function App(props) {
+  console.log(props)
+  return (
+    <header>
+      {props.children}
+    </header>
+  );
+}
+
+ReactDOM.render(
+  <App className='my-class'>
+    <h1>Sally  Student resume</h1>
+    <h2>Contact info</h2>
+     <ul>
+            <li><strong> Name: </strong> Sally Smith</li>
+            <li><strong>Email: </strong> <a href="mailto:tf.sally.student@gmail.com?subject=Link Here, Link There" target="_blank">Click Here</a></li>
+            <li><strong> Phone number: </strong> 919-3465844</li>
+            <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg"/>
+          </ul>
+          <h2>Employment History</h2>
+            <ul>
+              <li> <h3><u>Google:2011-2015 </u></h3></li>
+                <p><strong> Title:</strong> Leading Web Developer <br/><strong>Job description:</strong> Beeing the most skilled web developer for the best search engine company in the world!</p>
+              <li><h3><u> Facebook: 2015-2019 </u></h3></li>
+                <p><strong> Title:</strong> Leading Software Engineer.<br/><strong>Job description:</strong> Beeing the most skilled programmer for the best social network company in the world!</p>
+            </ul>
+  </App>,
+  document.querySelector('#application-root')
+);
+
+    </script>
+
+    <style>
+        body {
+            background: url(https://i.pinimg.com/originals/92/90/72/929072dd52c6dd4d23d8f8c7ad2cfc4c.jpg);
+            background-size: cover;
+
+        }
+
+        h1,
+        h2,
+        ul {
+            color: white;
+        }
+    </style>
+</body></html>
